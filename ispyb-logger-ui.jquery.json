@@ -1,0 +1,26 @@
+{
+  "name": "ispyb-logger-ui",
+  "title": "ISPyB Logger UI",
+  "description": "User Inteface for logging methods on ISPyB",
+  "version": "0.1.0",
+  "homepage": "https://github.com/antolinos/ispyb-logger-ui",
+  "main" : "index.html",
+  "author": {
+    "name": "A. de Maria"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/antolinos/ispyb-logger-ui.git"
+  },
+  "bugs": "https://github.com/antolinos/ispyb-logger-ui/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/antolinos/ispyb-logger-ui/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}

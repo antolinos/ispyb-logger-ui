@@ -1,0 +1,25 @@
+{
+  "name": "ispyb-logger-ui",
+  "description": "User Interace for ISPyB logging methods",
+  "main": "html/index.html",
+  "authors": [
+    "A. de Maria"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ISPyB",
+    "logger",
+    "UI"
+  ],
+  "homepage": "dist/index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
