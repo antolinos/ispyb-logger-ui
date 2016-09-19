@@ -13,7 +13,12 @@
 <!-- bower:js -->
 <script src="../bower_components/jquery/dist/jquery.js"></script>
 <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="../bower_components/lodash/lodash.js"></script>
+<script src="../bower_components/plotlyjs/plotly.js"></script>
 <!-- endbower -->
+
+<script src="../dist/ispyb-logger-ui.min.js"></script>
+
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
     .navbar {
@@ -48,6 +53,27 @@
     }
   </style>
 </head>
+<script>
+    function loadFile(fileName){
+         $.ajax({
+                dataType: "json",
+              
+                url: '../data/' + fileName,
+                success: function(data){
+                    var array = [];
+                    $.each(data, function (key, value) {
+                        array.push(value);
+                    });
+                   var statsParser = new StatsParser();
+                   statsParser.parse(array);
+                }
+        });
+    }
+    $( document ).ready(function() {
+       loadFile('server.log.json');
+       
+    });    
+</script>  
 <body>
 
 <nav class="navbar navbar-inverse">
@@ -76,7 +102,7 @@
   
 <div class="container-fluid text-center">
   <div class="row content">
-    <div class="col-sm-2 sidenav">
+    <div class="col-sm-1 sidenav">
       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p>
@@ -88,9 +114,9 @@
       <h3>Test</h3>
       <p>Lorem ipsum...</p>
     </div>
-    <div class="col-sm-2 sidenav">
-      <div class="well">
-        <p>ADS</p>
+    <div class="col-sm-3 sidenav">
+      <div  id='pie-chart'>
+        
       </div>
       <div class="well">
         <p>ADS</p>

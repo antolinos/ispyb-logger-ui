@@ -1,4 +1,4 @@
-/*! ISPyB Logger UI - v0.1.0 - 2016-09-18
+/*! ISPyB Logger UI - v0.1.0 - 2016-09-19
 * https://github.com/antolinos/ispyb-logger-ui
 * Copyright (c) 2016 A. de Maria; Licensed MIT */
 (function($) {

@@ -1,0 +1,152 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.21
+3 info using node@v0.10.29
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui',
+5 verbose install   [ 'dustjs-helpers',
+5 verbose install     'dustjs-linkedin',
+5 verbose install     'grunt',
+5 verbose install     'grunt-contrib-yuidoc',
+5 verbose install     'grunt-debian-package',
+5 verbose install     'grunt-dustjs',
+5 verbose install     'grunt-cli',
+5 verbose install     'grunt-contrib-concat',
+5 verbose install     'grunt-contrib-cssmin',
+5 verbose install     'grunt-contrib-jshint',
+5 verbose install     'grunt-contrib-uglify',
+5 verbose install     'grunt-contrib-watch',
+5 verbose install     'grunt-include-source',
+5 verbose install     'grunt-plato',
+5 verbose install     'grunt-wiredep',
+5 verbose install     'jshint-stylish' ] ]
+6 info preinstall EXI@1.0.0
+7 verbose readDependencies using package.json deps
+8 verbose already installed skipping dustjs-helpers@^1.7.3 /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+9 verbose already installed skipping dustjs-linkedin@^2.7.2 /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+10 verbose already installed skipping grunt@^0.4.5 /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+11 verbose already installed skipping grunt-contrib-yuidoc@^1.0.0 /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+12 verbose already installed skipping grunt-debian-package@^0.1.11 /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+13 verbose already installed skipping grunt-dustjs@^1.3.0 /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+14 verbose already installed skipping grunt-contrib-concat@^0.5.1 /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+15 verbose already installed skipping grunt-cli@^0.1.13 /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+16 verbose already installed skipping grunt-contrib-cssmin@^0.14.0 /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+17 verbose already installed skipping grunt-contrib-jshint@^0.11.3 /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+18 verbose already installed skipping grunt-contrib-uglify@^0.9.2 /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+19 verbose already installed skipping grunt-contrib-watch@^0.6.1 /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+20 verbose already installed skipping grunt-include-source@^0.7.0 /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+21 verbose already installed skipping grunt-wiredep@^2.0.0 /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+22 verbose already installed skipping grunt-plato@^1.2.1 /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+23 verbose already installed skipping jshint-stylish@^2.0.1 /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+24 silly resolved []
+25 info build /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+26 verbose linkStuff [ false, false, false, '/opt2/apache-tomcat-7.0.67/webapps' ]
+27 info linkStuff EXI@1.0.0
+28 verbose linkBins EXI@1.0.0
+29 verbose linkMans EXI@1.0.0
+30 verbose rebuildBundles EXI@1.0.0
+31 verbose rebuildBundles [ '.bin',
+31 verbose rebuildBundles   'dustjs-helpers',
+31 verbose rebuildBundles   'dustjs-linkedin',
+31 verbose rebuildBundles   'grunt',
+31 verbose rebuildBundles   'grunt-cli',
+31 verbose rebuildBundles   'grunt-contrib-clean',
+31 verbose rebuildBundles   'grunt-contrib-concat',
+31 verbose rebuildBundles   'grunt-contrib-copy',
+31 verbose rebuildBundles   'grunt-contrib-cssmin',
+31 verbose rebuildBundles   'grunt-contrib-jshint',
+31 verbose rebuildBundles   'grunt-contrib-qunit',
+31 verbose rebuildBundles   'grunt-contrib-uglify',
+31 verbose rebuildBundles   'grunt-contrib-watch',
+31 verbose rebuildBundles   'grunt-contrib-yuidoc',
+31 verbose rebuildBundles   'grunt-debian-package',
+31 verbose rebuildBundles   'grunt-dustjs',
+31 verbose rebuildBundles   'grunt-include-source',
+31 verbose rebuildBundles   'grunt-plato',
+31 verbose rebuildBundles   'grunt-wiredep',
+31 verbose rebuildBundles   'jshint-stylish',
+31 verbose rebuildBundles   'phantomjs' ]
+32 verbose rebuild bundle /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui/node_modules/grunt-contrib-clean
+33 info build /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui/node_modules/grunt-contrib-clean
+34 info preinstall grunt-contrib-clean@0.4.1
+35 verbose linkStuff [ false,
+35 verbose linkStuff   false,
+35 verbose linkStuff   false,
+35 verbose linkStuff   '/opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui/node_modules' ]
+36 info linkStuff grunt-contrib-clean@0.4.1
+37 verbose linkBins grunt-contrib-clean@0.4.1
+38 verbose linkMans grunt-contrib-clean@0.4.1
+39 verbose rebuildBundles grunt-contrib-clean@0.4.1
+40 info install grunt-contrib-clean@0.4.1
+41 info postinstall grunt-contrib-clean@0.4.1
+42 verbose rebuild bundle /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui/node_modules/grunt-contrib-copy
+43 info build /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui/node_modules/grunt-contrib-copy
+44 info preinstall grunt-contrib-copy@1.0.0
+45 verbose linkStuff [ false,
+45 verbose linkStuff   false,
+45 verbose linkStuff   false,
+45 verbose linkStuff   '/opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui/node_modules' ]
+46 info linkStuff grunt-contrib-copy@1.0.0
+47 verbose linkBins grunt-contrib-copy@1.0.0
+48 verbose linkMans grunt-contrib-copy@1.0.0
+49 verbose rebuildBundles grunt-contrib-copy@1.0.0
+50 verbose rebuildBundles [ 'chalk', 'file-sync-cmp' ]
+51 info install grunt-contrib-copy@1.0.0
+52 info postinstall grunt-contrib-copy@1.0.0
+53 verbose rebuild bundle /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui/node_modules/grunt-contrib-qunit
+54 info build /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui/node_modules/grunt-contrib-qunit
+55 info preinstall grunt-contrib-qunit@1.2.0
+56 verbose linkStuff [ false,
+56 verbose linkStuff   false,
+56 verbose linkStuff   false,
+56 verbose linkStuff   '/opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui/node_modules' ]
+57 info linkStuff grunt-contrib-qunit@1.2.0
+58 verbose linkBins grunt-contrib-qunit@1.2.0
+59 verbose linkMans grunt-contrib-qunit@1.2.0
+60 verbose rebuildBundles grunt-contrib-qunit@1.2.0
+61 verbose rebuildBundles [ 'grunt-lib-phantomjs' ]
+62 info install grunt-contrib-qunit@1.2.0
+63 info postinstall grunt-contrib-qunit@1.2.0
+64 verbose rebuild bundle /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui/node_modules/phantomjs
+65 info build /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui/node_modules/phantomjs
+66 info preinstall phantomjs@2.1.7
+67 verbose linkStuff [ false,
+67 verbose linkStuff   false,
+67 verbose linkStuff   false,
+67 verbose linkStuff   '/opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui/node_modules' ]
+68 info linkStuff phantomjs@2.1.7
+69 verbose linkBins phantomjs@2.1.7
+70 verbose link bins [ { phantomjs: './bin/phantomjs' },
+70 verbose link bins   '/opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui/node_modules/.bin',
+70 verbose link bins   false ]
+71 verbose linkMans phantomjs@2.1.7
+72 verbose rebuildBundles phantomjs@2.1.7
+73 verbose rebuildBundles [ '.bin',
+73 verbose rebuildBundles   'extract-zip',
+73 verbose rebuildBundles   'fs-extra',
+73 verbose rebuildBundles   'hasha',
+73 verbose rebuildBundles   'kew',
+73 verbose rebuildBundles   'progress',
+73 verbose rebuildBundles   'request',
+73 verbose rebuildBundles   'request-progress',
+73 verbose rebuildBundles   'which' ]
+74 info install phantomjs@2.1.7
+75 verbose unsafe-perm in lifecycle true
+76 info phantomjs@2.1.7 Failed to exec install script
+77 error phantomjs@2.1.7 install: `node install.js`
+77 error Exit status 8
+78 error Failed at the phantomjs@2.1.7 install script.
+78 error This is most likely a problem with the phantomjs package,
+78 error not with npm itself.
+78 error Tell the author that this fails on your system:
+78 error     node install.js
+78 error You can get their info via:
+78 error     npm owner ls phantomjs
+78 error There is likely additional logging output above.
+79 error System Linux 4.3.0-0.bpo.1-amd64
+80 error command "/usr/bin/nodejs" "/usr/bin/npm" "install"
+81 error cwd /opt2/apache-tomcat-7.0.67/webapps/ispyb-logger-ui
+82 error node -v v0.10.29
+83 error npm -v 1.4.21
+84 error code ELIFECYCLE
+85 verbose exit [ 1, true ]

@@ -20,6 +20,12 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "lodash": "^4.16.0",
+    "plotlyjs": "plotly#^1.16.2"
+  },
+  "devDependencies": {
+    "lodash": "^4.16.0",
+    "plotlyjs": "plotly#^1.16.2"
   }
 }

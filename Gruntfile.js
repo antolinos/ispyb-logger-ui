@@ -36,16 +36,17 @@ module.exports = function(grunt) {
         banner: '<%= banner %>'
       },
       dist: {
-        src: '<%= concat.dist.dest %>',
-        dest: 'dist/jquery.<%= pkg.name %>.min.js'
+        src: [ 'src/*.js'],
+        dest: 'dist/<%= pkg.name %>.min.js'
       },
     },
     qunit: {
       files: ['test/**/*.html']
     },
-    jshint: {
+    jshint: {        
       options: {
-        jshintrc: true
+		jshintrc : '.jshintrc'
+        
       },
       gruntfile: {
         src: 'Gruntfile.js'
@@ -69,7 +70,7 @@ module.exports = function(grunt) {
       },
       src: {
         files: '<%= jshint.src.src %>',
-        tasks: ['jshint:src', 'qunit']
+        tasks: ['jshint:src', 'uglify']
       },
       test: {
         files: '<%= jshint.test.src %>',
