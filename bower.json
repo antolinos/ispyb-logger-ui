@@ -22,7 +22,10 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "lodash": "^4.16.0",
-    "plotlyjs": "plotly#^1.16.2"
+    "plotlyjs": "plotly#^1.16.2",
+    "moment": "^2.15.1",
+    "dustjs-linkedin": "^2.7.4",
+    "pathjs-amd": "^0.10.1"
   },
   "devDependencies": {
     "lodash": "^4.16.0",

@@ -77,6 +77,13 @@ module.exports = function(grunt) {
         tasks: ['jshint:test', 'qunit']
       },
     },
+    dustjs: {
+	    compile: {
+	      files: {
+	                'dist/precompiled.templates.min.js': ['templates/*js']
+	      }
+	    }
+	  }
   });
 
   // These plugins provide necessary tasks.
@@ -88,7 +95,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-wiredep');
+  grunt.loadNpmTasks('grunt-dustjs');
   // Default task.
-  grunt.registerTask('default', [ 'jshint', 'wiredep', 'qunit', 'clean', 'copy','concat', 'uglify']);
+
+  grunt.registerTask('default', [ 'clean','dustjs','jshint', 'wiredep', 'qunit',  'copy','concat', 'uglify']);
 
 };

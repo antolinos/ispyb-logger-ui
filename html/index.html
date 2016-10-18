@@ -15,9 +15,14 @@
 <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="../bower_components/lodash/lodash.js"></script>
 <script src="../bower_components/plotlyjs/plotly.js"></script>
+<script src="../bower_components/moment/moment.js"></script>
+<script src="../bower_components/dustjs-linkedin/dist/dust-full.min.js"></script>
+<script src="../bower_components/pathjs-amd/dist/path.js"></script>
 <!-- endbower -->
 
-<script src="../dist/ispyb-logger-ui.min.js"></script>
+<!--<script src="../dist/ispyb-logger-ui.min.js"></script>-->
+<script src="../src/statsparser.js"></script>
+<script src="../dist/precompiled.templates.min.js"></script>
 
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
@@ -54,23 +59,60 @@
   </style>
 </head>
 <script>
-    function loadFile(fileName){
+    var statsParser = new StatsParser();
+    function loadFile(fileName){       
          $.ajax({
-                dataType: "json",
-              
+                dataType: "json",              
                 url: '../data/' + fileName,
                 success: function(data){
                     var array = [];
                     $.each(data, function (key, value) {
                         array.push(value);
-                    });
-                   var statsParser = new StatsParser();
-                   statsParser.parse(array);
+                    });                   
+                    statsParser.parse(array);
+                    var stats = statsParser.getPackageStats(array);
+                    
+                    
+                        $("#button-group-panel").html("");
+                    for(var i=0; i< stats.keys.length; i++){
+                        var html =  '<button onClick="statsParser.loadPackage(\''+ stats.keys[i]+'\')" type="button" class="btn btn-primary">' + stats.keys[i] +'  <span class="badge">'+ stats.values[i]+'</span></button>';
+                        $("#button-group-panel").html( $("#button-group-panel").html() + html);
+                    }
                 }
         });
     }
+    
+    function loadIndex(fileName){
+         $.ajax({
+                dataType: "json",              
+                url: '../data/' + fileName,
+                success: function(data){
+                   var files = data.sort();                  
+                   for (var i = 0; i < files.length; i++){  
+                       if (files[i] != fileName){               
+                            $('#indexMenu').html($('#indexMenu').html() +  '<p><a href="#/' + files[i] +'/file" style="font-size:10px;">' + files[i] + '</a></p>');
+                       }
+                   }
+                }
+        });
+    }
+    
+    
     $( document ).ready(function() {
-       loadFile('server.log.json');
+      
+       loadIndex('index.json');
+       
+       function clearPanel(){
+        // You can put some code in here to do fancy DOM transitions, such as fade-out or slide-in.
+        }
+
+        Path.map("#/:file/file").to(function(){
+            loadFile(this.params["file"]);
+        });
+       
+
+        Path.listen();
+    
        
     });    
 </script>  
@@ -102,18 +144,22 @@
   
 <div class="container-fluid text-center">
   <div class="row content">
-    <div class="col-sm-1 sidenav">
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
+    <div class="col-sm-1 sidenav" id='indexMenu'>    
     </div>
     <div id='main' class="col-sm-8 text-left">
-      <h1>Welcome</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
+     <br/>
+      
+      <div class="container">        
+        <div class="btn-group" id='button-group-panel'>
+         
+        </div>
+        </div>
 
-      <h3>ISPyB-API</h3>
-       <div  id='ispyb-api'></div>
+
+  
+       <div  id='plot'></div>
+       <div  id='output'></div>
+       
     </div>
     <div class="col-sm-3 sidenav">
       <div  id='pie-chart'></div>
