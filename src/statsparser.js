@@ -68,14 +68,23 @@ StatsParser.prototype.displayTable = function(logMessages) {
             }  
             
             if (typeof(logMessages[i].PARAMS) == "object"){
-                if (logMessages[i].PARAMS){                            
-                    for (var key in logMessages[i].PARAMS){                        
-                            attributes.push({
-                                key : key,
-                                value :logMessages[i].PARAMS[key]
-                            });                    
-                    }                           
-                }
+		try{
+			logMessages[i].PARAMS = JSON.parse(logMessages[i].PARAMS);
+		}
+		catch(e){
+		       
+		}
+		finally{
+			 if (logMessages[i].PARAMS){                            
+		            for (var key in logMessages[i].PARAMS){ 
+				                       
+		                    attributes.push({
+		                        key : key,
+		                        value : JSON.stringify(logMessages[i].PARAMS[key])
+		                    });                    
+		            }                           
+		        }
+		}
             }                         
         }
         else{
